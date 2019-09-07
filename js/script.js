@@ -63,8 +63,8 @@ window.addEventListener("DOMContentLoaded", function () {
             newcell.style.backgroundColor = "black";
             // newcell.classList.add('cell');
             if (document.body.clientWidth < 576) {
-                newcell.style.height = "20px";
-                newcell.style.width = "20px";
+                newcell.style.height = "23px";
+                newcell.style.width = "23px";
             }
         }
     }
@@ -103,14 +103,17 @@ addEventListener('keydown', function (event) {
 });
 
 addEventListener('click', function (event) {
-    if (event.target == buttons[0].firstChild) {
-        Pushleft();
+    if (CheckCollision(CurrentFigure)) {
+        return;
+    }
+    if (event.target == buttons[0].firstChild ) {
+        Pushleft();   
     } else if (event.target == buttons[1].firstChild) {
-        Rollingfigure();
+        Rollingfigure();    
     } else if (event.target == buttons[2].firstChild) {
-        PushRight();
+        PushRight();    
     } else if (event.target == buttons[3].firstChild) {
-        PushDown();
+        PushDown();    
     }
     this.blur();
 });
