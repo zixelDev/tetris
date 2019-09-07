@@ -63,8 +63,8 @@ window.addEventListener("DOMContentLoaded", function () {
             newcell.style.backgroundColor = "black";
             // newcell.classList.add('cell');
             if (document.body.clientWidth < 576) {
-                newcell.style.height = "23px";
-                newcell.style.width = "23px";
+                newcell.style.height = "20px";
+                newcell.style.width = "20px";
             }
         }
     }
